@@ -335,6 +335,52 @@ body{padding-bottom:88px;}
   border-radius:50%;background:var(--cyan);}
 .unelte .mini li b{color:var(--text);font-weight:700;}
 .unelte .mini-nota{font-size:15px;color:var(--text-2);font-style:italic;margin:0 0 10px;}
+
+/* ---------- cine sunt ---------- */
+.cine{display:flex;gap:16px;align-items:center;margin:0 0 14px;}
+.cine-foto{flex:0 0 auto;width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:50% 22%;
+  border:3px solid var(--hartie-2);box-shadow:0 10px 26px -12px rgba(22,13,48,.5);}
+.cine h2{margin:0;}
+.cine-bio{color:var(--text-2);font-size:16.5px;margin:0 0 20px;max-width:none;}
+.cifre{margin:0 0 26px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
+.cifre div{background:var(--hartie-2);border-radius:12px;padding:12px 14px;min-width:0;}
+.cifre dt{font-size:11px;text-transform:uppercase;letter-spacing:.11em;font-weight:700;color:var(--text-3);margin:0 0 2px;}
+.cifre dd{margin:0;font-family:Fraunces,Georgia,serif;font-size:24px;font-weight:600;color:var(--mov);}
+.sp-titlu{font-size:18px;margin:0 0 12px;}
+.sportivi{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:8px;}
+.sportivi li{border:1px solid var(--linie);border-left:3px solid var(--cyan);border-radius:12px;padding:11px 14px;}
+.sportivi b{display:block;font-family:Fraunces,Georgia,serif;font-size:17px;font-weight:600;}
+.sportivi span{display:block;font-size:14.5px;color:var(--text-2);line-height:1.45;margin-top:2px;}
+.nda{font-size:14px;color:var(--text-3);margin:10px 0 0;max-width:none;}
+.directia{margin:26px 0 0;background:var(--noapte-2);color:#fff;border-radius:18px;padding:24px 20px;}
+.dir-q,.dir-a{font-family:Fraunces,Georgia,serif;font-size:clamp(1.3rem,5.4vw,1.7rem);line-height:1.25;font-weight:600;max-width:none;}
+.dir-q{color:#fff;margin:0 0 4px;}
+.dir-a{color:var(--cyan);margin:0 0 14px;}
+.dir-t{color:var(--alb-2);font-size:16px;margin:0;max-width:none;}
+.presa-linie{font-size:14px;color:var(--text-3);margin:14px 0 0;max-width:none;}
+
+/* ---------- ecrane din aplicatie ---------- */
+.ecrane{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+  margin:22px -20px 0;padding:4px 20px 12px;scroll-padding-left:20px;}
+.ecrane figure{flex:0 0 72%;scroll-snap-align:start;margin:0;}
+.tel{border-radius:28px;background:#160c30;padding:7px;
+  box-shadow:0 20px 44px -20px rgba(22,13,48,.55),0 0 0 1px rgba(92,30,250,.16);}
+.tel img{width:100%;border-radius:22px;}
+.ecrane figcaption{margin:12px 2px 0;}
+.ecrane figcaption b{display:block;font-family:Fraunces,Georgia,serif;font-size:17px;font-weight:600;}
+.ecrane figcaption span{display:block;font-size:14.5px;color:var(--text-2);line-height:1.45;margin-top:2px;}
+.gliseaza{font-size:13px;color:var(--text-3);margin:4px 0 0;max-width:none;}
+.mese-tel{max-width:230px;margin:6px auto 16px;}
+@media (min-width:700px){
+  .cine-foto{width:112px;height:112px;}
+  .cifre{grid-template-columns:repeat(4,minmax(0,1fr));}
+  .sportivi{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .ecrane{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;overflow:visible;margin:24px 0 0;padding:0;}
+  .ecrane figure{flex:none;}
+  .tel{border-radius:24px;padding:6px;}
+  .tel img{border-radius:19px;}
+  .gliseaza{display:none;}
+}
 </style>
 </head>
 <body>
@@ -376,6 +422,43 @@ body{padding-bottom:88px;}
   </div>
 </div>
 
+
+<section class="cine-sec">
+  <div class="container">
+    <p class="numar">Cine ține programul</p>
+    <div class="cine">
+      <img class="cine-foto" src="img/fabius.jpg" alt="Fabius Antal" width="112" height="112">
+      <h2>Sunt Fabius Antal.</h2>
+    </div>
+    <p class="cine-bio">De peste 10 ani lucrez la alimentația și refacerea sportivilor de performanță: fotbaliști de la națională, din Liga 1 și din campionatele mari ale Europei, plus atleți de nivel olimpic.</p>
+
+    <dl class="cifre">
+      <div><dt>Sportivi de elită</dt><dd>+40</dd></div>
+      <div><dt>Țări</dt><dd>6+</dd></div>
+      <div><dt>Ani</dt><dd>10+</dd></div>
+      <div><dt>Partener</dt><dd>WHOOP</dd></div>
+    </dl>
+
+    <h3 class="sp-titlu">Câțiva dintre sportivii cu care am lucrat</h3>
+    <ul class="sportivi">
+      <li><b>Vlad Chiricheș</b><span>Fost Napoli și Tottenham. Peste 75 de selecții la naționala României.</span></li>
+      <li><b>Alexandru Chipciu</b><span>Fost Anderlecht și Universitatea Cluj.</span></li>
+      <li><b>Darius Olaru</b><span>Căpitanul FCSB. Internațional.</span></li>
+      <li><b>Alexandru Cicâldău</b><span>Fost Galatasaray și Universitatea Craiova. Internațional.</span></li>
+      <li><b>Andrea Miklós</b><span>Atletism, 400 m. De trei ori olimpică, vicecampioană mondială.</span></li>
+      <li><b>Mihail Lixandru</b><span>FCSB. Internațional U21, convocat la naționala mare.</span></li>
+    </ul>
+    <p class="nda">Plus trei internaționali care joacă în Europa, sub confidențialitate, și alți sportivi care preferă să nu fie numiți.</p>
+
+    <div class="directia">
+      <p class="dir-q">Vrei să înveți cum au făcut Chiricheș, Chipciu sau Olaru?</p>
+      <p class="dir-a">Ăsta e sistemul.</p>
+      <p class="dir-t">Același sistem pe care l-am folosit cu ei, coborât pe înțelesul unui junior: pe programul lui de școală și de antrenamente, și pe faptul că încă crește.</p>
+    </div>
+
+    <p class="presa-linie">Apariții despre alimentație la Observator (Antena 1) și Antena 3 CNN.</p>
+  </div>
+</section>
 
 <section class="scurt-sec">
   <div class="container">
@@ -481,7 +564,31 @@ body{padding-bottom:88px;}
 
 <section>
   <div class="container">
-    <p class="numar"><i>04</i> Trei lucruri care rămân ale lui</p>
+    <p class="numar"><i>04</i> Cum arată, în aplicație</p>
+    <h2>Totul pe telefon: capitole, lecții, video</h2>
+    <p class="intro">Copilul parcurge cursul pe telefon, capitol după capitol, în ritmul lui. Fiecare capitol are lecțiile lui și un test scurt. Ghidurile se deschid oricând, iar masterclass-urile cu invitați sunt filmate și rămân de revăzut.</p>
+
+    <div class="ecrane">
+      <figure>
+        <div class="tel"><img src="img/capitole.jpg" alt="Capitolele cursului în aplicație" width="600" height="1299" loading="lazy"></div>
+        <figcaption><b>Capitolele</b><span>În ordine, de la cifrele lui până la autonomie. Fiecare cu lecțiile și testul lui.</span></figcaption>
+      </figure>
+      <figure>
+        <div class="tel"><img src="img/lectie.jpg" alt="O lecție din curs" width="600" height="1299" loading="lazy"></div>
+        <figcaption><b>O lecție</b><span>Ghidul de citit, plus un exemplu real și ieftin de la Auchan, cu prețuri.</span></figcaption>
+      </figure>
+      <figure>
+        <div class="tel"><img src="img/video.jpg" alt="Video cu specialiști" width="600" height="1299" loading="lazy"></div>
+        <figcaption><b>Video cu specialiști</b><span>Masterclass-urile cu invitați, filmate. Primul: alergarea corectă, pe pista de la Cluj Arena.</span></figcaption>
+      </figure>
+    </div>
+    <p class="gliseaza">Glisează spre stânga pentru celelalte ecrane →</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="numar"><i>05</i> Trei lucruri care rămân ale lui</p>
     <h2>Nu se închid la finalul celor 8 săptămâni</h2>
     <p class="intro">Cursul se termină. Instrumentele nu.</p>
 
@@ -493,7 +600,8 @@ body{padding-bottom:88px;}
       </li>
       <li>
         <h3>Sistemul „Mese on-the-go”</h3>
-        <p><b>82 de produse reale din magazin</b>, cu poză, preț la zi și valori de pe etichetă. Nu rețete generice, ci exact ce găsești pe raft.</p>
+        <p><b>82 de produse reale din magazin</b>, cu preț și valorile de pe etichetă. Nu rețete generice, ci exact ce găsești pe raft.</p>
+        <div class="tel mese-tel"><img src="img/mese.jpg" alt="Mesele cu prețuri în aplicație" width="600" height="1299" loading="lazy"></div>
         <ul class="mini">
           <li><b>98 de mese gata calculate</b>, cu macro și preț socotite automat, de la 2 lei gustarea până la masa completă</li>
           <li><b>Planul zilei pe cifrele lui</b>: pui greutatea, sportul lui și tipul de zi, iar sistemul îți compune ziua întreagă</li>
@@ -516,7 +624,7 @@ body{padding-bottom:88px;}
 
 <section>
   <div class="container">
-    <p class="numar"><i>05</i> Ce știe să facă la final</p>
+    <p class="numar"><i>06</i> Ce știe să facă la final</p>
     <h2>Semnele că a mers</h2>
     <ul class="bife">
       <li>Își face singur farfuria, fără să întrebe pe nimeni.</li>
@@ -533,7 +641,7 @@ body{padding-bottom:88px;}
 <section>
   <div class="container">
     <div class="registru">
-      <p class="numar"><i>06</i> După absolvire</p>
+      <p class="numar"><i>07</i> După absolvire</p>
       <h2>Registrul Sportivilor</h2>
       <p>Când termină cele 8 săptămâni, intră în Registrul Sportivilor. Instrumentele rămân deschise, iar progresul lui rămâne urmărit și după ce se încheie grupa.</p>
       <p>Nu e o listă de nume. E felul în care ținem legătura cu copiii care au trecut pe aici.</p>
@@ -544,7 +652,7 @@ body{padding-bottom:88px;}
 
 <section id="pret">
   <div class="container">
-    <p class="numar"><i>07</i> Cât costă și ce primești</p>
+    <p class="numar"><i>08</i> Cât costă și ce primești</p>
     <h2>200 de euro, totul inclus</h2>
 
     <div class="pret-cutie">
@@ -580,7 +688,7 @@ body{padding-bottom:88px;}
 
 <section>
   <div class="container">
-    <p class="numar"><i>08</i> Întrebări frecvente</p>
+    <p class="numar"><i>09</i> Întrebări frecvente</p>
 
     <details>
       <summary>Contează ce sport face?</summary>
@@ -621,19 +729,9 @@ body{padding-bottom:88px;}
   </div>
 </section>
 
-<section>
-  <div class="container">
-    <div class="despre">
-      <h3>Cine ține programul</h3>
-      <p>Fabius Antal. Lucrez cu fotbaliști profesioniști și cu atleți olimpici.</p>
-      <p>Aceleași principii, coborâte pe înțelesul unui junior și pe programul lui de școală și antrenamente.</p>
-    </div>
-  </div>
-</section>
-
 <div class="final">
   <div class="container">
-    <p class="numar"><i>09</i> Înscriere</p>
+    <p class="numar"><i>10</i> Înscriere</p>
     <h2>Intrați în grup și vorbim acolo</h2>
     <p style="margin-bottom:22px;">În grup aflați tot: cum se desfășoară, ce primește copilul și cum se face înscrierea. Îmi ziceți ce sport face, ce vârstă are și cum mănâncă acum. Dacă văd că nu are ce să câștige, vă spun direct.</p>
 
